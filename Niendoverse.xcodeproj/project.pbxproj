@@ -10,6 +10,8 @@
 		E6F9E5BF24083FFA00422B09 /* Niendoverse.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E6F9E5B524083FF900422B09 /* Niendoverse.framework */; };
 		E6F9E5C424083FFA00422B09 /* NiendoverseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F9E5C324083FFA00422B09 /* NiendoverseTests.swift */; };
 		E6F9E5C624083FFA00422B09 /* Niendoverse.h in Headers */ = {isa = PBXBuildFile; fileRef = E6F9E5B824083FF900422B09 /* Niendoverse.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		E6F9E5D12408413200422B09 /* Core.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F9E5D02408413200422B09 /* Core.swift */; };
+		E6F9E5D42408415100422B09 /* BaseDimensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6F9E5D32408415100422B09 /* BaseDimensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +31,8 @@
 		E6F9E5BE24083FFA00422B09 /* NiendoverseTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NiendoverseTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		E6F9E5C324083FFA00422B09 /* NiendoverseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NiendoverseTests.swift; sourceTree = "<group>"; };
 		E6F9E5C524083FFA00422B09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		E6F9E5D02408413200422B09 /* Core.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Core.swift; sourceTree = "<group>"; };
+		E6F9E5D32408415100422B09 /* BaseDimensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseDimensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,8 @@
 		E6F9E5B724083FF900422B09 /* Niendoverse */ = {
 			isa = PBXGroup;
 			children = (
+				E6F9E5D22408414000422B09 /* Dimensions */,
+				E6F9E5CF2408412600422B09 /* Entities */,
 				E6F9E5B824083FF900422B09 /* Niendoverse.h */,
 				E6F9E5B924083FF900422B09 /* Info.plist */,
 			);
@@ -84,6 +90,22 @@
 				E6F9E5C524083FFA00422B09 /* Info.plist */,
 			);
 			path = NiendoverseTests;
+			sourceTree = "<group>";
+		};
+		E6F9E5CF2408412600422B09 /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				E6F9E5D02408413200422B09 /* Core.swift */,
+			);
+			path = Entities;
+			sourceTree = "<group>";
+		};
+		E6F9E5D22408414000422B09 /* Dimensions */ = {
+			isa = PBXGroup;
+			children = (
+				E6F9E5D32408415100422B09 /* BaseDimensions.swift */,
+			);
+			path = Dimensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -148,6 +170,7 @@
 				TargetAttributes = {
 					E6F9E5B424083FF900422B09 = {
 						CreatedOnToolsVersion = 11.3.1;
+						LastSwiftMigration = 1130;
 					};
 					E6F9E5BD24083FFA00422B09 = {
 						CreatedOnToolsVersion = 11.3.1;
@@ -195,6 +218,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E6F9E5D12408413200422B09 /* Core.swift in Sources */,
+				E6F9E5D42408415100422B09 /* BaseDimensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -340,6 +365,7 @@
 		E6F9E5CA24083FFA00422B09 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = YMAHMY8SDJ;
@@ -356,6 +382,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.niendos.Niendoverse;
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -364,6 +391,7 @@
 		E6F9E5CB24083FFA00422B09 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = YMAHMY8SDJ;
@@ -388,6 +416,7 @@
 		E6F9E5CD24083FFA00422B09 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YMAHMY8SDJ;
 				INFOPLIST_FILE = NiendoverseTests/Info.plist;
@@ -406,6 +435,7 @@
 		E6F9E5CE24083FFA00422B09 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = YMAHMY8SDJ;
 				INFOPLIST_FILE = NiendoverseTests/Info.plist;
